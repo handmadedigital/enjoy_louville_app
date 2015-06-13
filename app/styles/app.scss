@@ -1,1 +1,28 @@
-@import 'ember-paper';
+@import 'inc/_colors.scss';
+@import 'inc/_sidebar.scss';
+@import 'inc/_forms.scss';
+
+body{
+	background-attachment: fixed;
+}
+
+.form-wrapper{
+	box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.2);
+	padding: 15px;
+}
+
+/************************/
+/* HEADER */
+/***********************/
+.navbar.navbar-default{
+	background: $primary_color;
+	margin-bottom: 0;
+
+	.navbar-brand{
+		color: $text;
+	}
+}
+
+/*************************/
+/* REGISTER */
+/************************/

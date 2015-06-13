@@ -1,0 +1,32 @@
+#sidebarWrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #fff;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.2);
+}
+
+#pageContentWrapper {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+}
+
+@media (min-width: 768px){
+  #sidebarWrapper {
+    width: 250px;
+  }
+  #pageContentWrapper {
+    padding: 20px;
+    position: relative;
+    padding-left: 250px;
+  }
+}

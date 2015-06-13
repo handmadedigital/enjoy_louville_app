@@ -19,6 +19,19 @@ module.exports = function(environment) {
     }
   };
 
+  ENV['simple-auth'] = {
+    authorizer: 'simple-auth-authorizer:token',
+    crossOriginWhitelist: ['http://localhost:8000']
+  };
+
+  ENV['simple-auth-token'] = {
+    refreshAccessTokens: true,
+    timeFactor: 1,
+    refreshLeeway: 300,
+    serverTokenEndpoint: 'http://localhost:8000/api/v1/login',
+    serverTokenRefreshEndpoint: 'http://localhost:8000/api/v1/token-refresh/'
+  };
+
   ENV.contentSecurityPolicy = {
     'default-src': "'none'",
     'script-src': "'self'",

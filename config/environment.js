@@ -27,9 +27,10 @@ module.exports = function(environment) {
   ENV['simple-auth-token'] = {
     refreshAccessTokens: true,
     timeFactor: 1,
-    refreshLeeway: 300,
-    serverTokenEndpoint: 'http://localhost:8000/api/v1/login',
-    serverTokenRefreshEndpoint: 'http://localhost:8000/api/v1/token-refresh/'
+    refreshLeeway: 540,
+    serverTokenEndpoint: 'http://localhost:8000/api/v1/authenticate',
+    serverTokenRefreshEndpoint: 'http://localhost:8000/api/v1/refresh-token/',
+    tokenExpireName: 'exp',
   };
 
   ENV.contentSecurityPolicy = {
